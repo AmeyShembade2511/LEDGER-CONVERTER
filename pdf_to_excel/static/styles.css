@@ -1,0 +1,55 @@
+body{
+    margin: 0px 0px 0px 0px;
+    background-color:black;
+}
+
+.File{
+    text-align: center;
+    background-color: #f3f0ec;
+    
+    padding: 30px 50px 50px 50px;
+}
+input[type='file']{
+    margin-left: 120px;
+    /* background-color: blue; */
+    
+}
+.head{
+    padding: 30px 30px 30px 30px;
+
+}
+input::-webkit-file-upload-button{
+    color: white;
+    background-color: #0d6efd;
+    border-radius: 7px;
+    border-color: #0d6efd;
+    padding: 0.2em 1.8em 0.2em 1.8em;
+    font-size:40px;
+    
+}
+.bttn{
+    display: inline-block;
+    padding-left: 10px;
+}
+.input{
+    color: blue;
+}
+#footer{
+    
+    text-align: center;
+    padding: 7% 15% ;
+}
+.lin{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 400px;
+    padding-right: 400px;
+    padding-bottom: 80px;
+}
+.icon-1{
+    padding-left: 4%;
+    padding-bottom: 5%;
+    padding-right: 4%;
+}
