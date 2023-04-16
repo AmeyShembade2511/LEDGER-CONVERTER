@@ -174,9 +174,18 @@ def s(file1):
                 if comp3:
                     #print(comp2)
                     l.append(comp2.group(0))
+                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 '):
+                        l.remove(l[len(l)-1])
+                        print("hi")
+                        l.append(' FF ')
+                    elif(l[len(l)-1]==' 00 '):
+                        l.remove(l[len(l)-1])
+                        l.append(' PP ')
 
                 if line.startswith('SECOND'):
                     #print(len(l))
+                    for j in range(len(l),24):
+                        l.append("--")
                     lines.append(Line(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12],l[13],l[14],l[15],l[16],l[17],l[18],l[19],l[20],l[21],l[22],l[23]))
 
                     l=[]
@@ -239,7 +248,14 @@ def t(file):
                     l.append("--")
                 if comp3:
 
-                    l.append(comp2.group(1))
+                    l.append(comp2.group(0))
+                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 '):
+                        l.remove(l[len(l)-1])
+                        print("hi")
+                        l.append(' FF ')
+                    elif(l[len(l)-1]==' 00 '):
+                        l.remove(l[len(l)-1])
+                        l.append(' PP ')
 
                 if line.startswith('THIRD'):
                     print(len(l))
@@ -254,3 +270,76 @@ def t(file):
     df.info()
     df.to_csv('pr_33.csv',index=False)
  
+def b(file):
+    import re
+    import parse
+    import pdfplumber
+    import pandas as pd
+    from collections import namedtuple
+
+    sub=['SEAT_NO','NAME','DESIGN_AND_ANALYSIS_OF_ALGORITHM','MACHINE_LEARNING','BLOCKCHAIN_TECHNOLOGY','ELECTIVE_III','ELECTIVE_IV','LABROTARY_PRACTICE_III','LABROTARY_PRACTICE_IV','PROJECT_STAGE_I','H0N_MACHINE_LEARNING','H0N_MACHINE_LEARNING_LAB','AUDIT_COURSE']
+    l=[]
+    file1="Nov 2022_B.E. (2019 PAT.)(COMPUTER).pdf"
+
+    Line=namedtuple('Line',sub)
+
+    seatno_re=re.compile(r'(S\B\d{9})')
+    seatno_re1=re.compile(r'(SEAT NO.:\B) (.*) NAME :')
+    name_re=re.compile(r'(NAME :\B) (.*) MOTHER :')
+    patt4=re.compile(r'(\s(\d+)\s)')
+    """patt=re.compile(r'\s{4}(\d+)')"""
+    patt=re.compile(r'\A(\d+)')
+    patt2=re.compile(r'\s{3}(\d+)')
+    lines=[]
+    one=''
+    two=''
+
+    with pdfplumber.open(file) as pdf:
+        pages=pdf.pages
+        for page in pdf.pages:
+            text=page.extract_text()
+            count=0
+            for line in text.split('\n'):
+                comp = seatno_re1.search(line)
+                comp1 = name_re.search(line)
+                comp2 = patt4.search(line)
+                comp3=patt.search(line)
+                comp4=patt2.search(line)
+                
+                if comp:
+                    l.append(comp.group(2))
+
+                    #print(one)
+                if comp1:
+                    
+                    l.append(comp1.group(2))
+                if line.startswith('410249'):
+                    print("hi")
+                    if(len(l)==10):
+                        l.append(' -- ')
+                        l.append(' -- ')
+                        l.append(' PP ')
+                elif comp3:
+                    #print(comp2)
+                            
+                    l.append(comp2.group(0))
+                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 '):
+                        l.remove(l[len(l)-1])
+                        print("hi")
+                        l.append(' FF ')
+                    elif(l[len(l)-1]==' 00 '):
+                        l.remove(l[len(l)-1])
+                        l.append(' PP ')        
+                       
+                if line.startswith('SGPA1'):
+                    print(l)
+                    for j in range(len(l),13):
+                        l.append("--")
+                    lines.append(Line(l[0],l[1],l[2],l[3],l[4],l[5],l[6],l[7],l[8],l[9],l[10],l[11],l[12]))
+                    
+                    l=[]
+
+    df=pd.DataFrame(lines)
+    df.head()
+    df.info()
+    df.to_csv('pr_33.csv',index=False)

@@ -57,7 +57,7 @@ def index(request):
 
 
 def waprfile(request):
-    ...
+    
 
     file_location = 'pr_33.csv'
 
@@ -79,7 +79,7 @@ def waprfile(request):
 
     return response
 
-print(file)
+
 def download(request):
     file1=c(file)
     response=HttpResponse(file)
