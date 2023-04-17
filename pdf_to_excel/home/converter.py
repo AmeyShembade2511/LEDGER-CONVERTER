@@ -174,9 +174,9 @@ def s(file1):
                 if comp3:
                     #print(comp2)
                     l.append(comp2.group(0))
-                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 '):
+                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 ' or l[len(l)-1]==' 03 ' or l[len(l)-1]==' 02 ' or l[len(l)-1]==' 05 ' or l[len(l)-1]==' 06 '):
                         l.remove(l[len(l)-1])
-                        print("hi")
+                        
                         l.append(' FF ')
                     elif(l[len(l)-1]==' 00 '):
                         l.remove(l[len(l)-1])
@@ -249,7 +249,7 @@ def t(file):
                 if comp3:
 
                     l.append(comp2.group(0))
-                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 '):
+                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 ' or l[len(l)-1]==' 03 ' or l[len(l)-1]==' 02 ' or l[len(l)-1]==' 05 ' or l[len(l)-1]==' 06 '):
                         l.remove(l[len(l)-1])
                         print("hi")
                         l.append(' FF ')
@@ -323,7 +323,7 @@ def b(file):
                     #print(comp2)
                             
                     l.append(comp2.group(0))
-                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 '):
+                    if(l[len(l)-1]==' 04 ' or l[len(l)-1]==' 01 ' or l[len(l)-1]==' 03 ' or l[len(l)-1]==' 02 ' or l[len(l)-1]==' 05 ' or l[len(l)-1]==' 06 '):
                         l.remove(l[len(l)-1])
                         print("hi")
                         l.append(' FF ')
