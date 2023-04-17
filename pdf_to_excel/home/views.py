@@ -29,7 +29,7 @@ def index(request):
             document=FilesUpload(file=file2)
             document.save(file2)
             print(file2)
-            file=c(file2)
+            # file=c(file2)
             print(file)                    
             return render(request,"download.html")
         if 'SE' in request.POST:
@@ -39,7 +39,7 @@ def index(request):
             document=FilesUpload(file=file2)
             document.save(file2)
             print(file2)
-            file=s(file2)
+            # file=s(file2)
             print(file)                    
             return render(request,"download.html")
         if 'TE' in request.POST:
@@ -49,7 +49,7 @@ def index(request):
             document=FilesUpload(file=file2)
             document.save(file2)
             print(file2)
-            file=t(file2)
+            # file=t(file2)
             print(file)                    
             return render(request,"download.html")
     return render(request,"index.html")
@@ -81,7 +81,7 @@ def waprfile(request):
 
 
 def download(request):
-    file1=c(file)
+    # file1=c(file)
     response=HttpResponse(file)
     
     return render(request,"download.html")

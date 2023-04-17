@@ -10,18 +10,18 @@
         <title>PDF TO EXCEL</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        {% comment %} <link rel="stylesheet" href="/static/styles.css"> {% endcomment %}
-        <link rel="stylesheet" href="static/styles.css">
+        <!-- <link rel="stylesheet" href=""> -->
+        <!-- {% comment %} <link rel="stylesheet" href="/static/styles.css"> {% endcomment %} -->
         <style type="">
             input[type='file'] {
-               color: transparent;
+                color: transparent;
             }
             
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> 
-        {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> {% endcomment %}
+        <link rel="stylesheet" href="../static/styles.css">
+        <!-- {% comment %} <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> {% endcomment %} -->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -34,17 +34,11 @@
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <input id="file" type="file" name="document">
-            <br>
-            <br>
-            <br>
             <div class="bttn">     
             <button type="submit" name="FE" class="btn btn-primary btn-lg">FE</button>
-            <br>
-            <br>     
             <button type="submit" name="SE" class="btn btn-primary btn-lg">SE</button>
-            <br>
-            <br>     
             <button type="submit" name="TE" class="btn btn-primary btn-lg">TE</button>
+            <button type="submit" name="BE" class="btn btn-primary btn-lg">BE</button>
             </div>
         </form> 
         
