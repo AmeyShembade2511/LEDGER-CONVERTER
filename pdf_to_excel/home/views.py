@@ -52,6 +52,16 @@ def index(request):
             # file=t(file2)
             print(file)                    
             return render(request,"download.html")
+        if 'TE' in request.POST:
+            file2=request.FILES['document']
+        
+        
+            document=FilesUpload(file=file2)
+            document.save(file2)
+            print(file2)
+            # file=b(file2)
+            print(file)                    
+            return render(request,"download.html")
     return render(request,"index.html")
 
 
