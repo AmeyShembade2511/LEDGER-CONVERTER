@@ -12,7 +12,11 @@ file=""
 from django.http import HttpResponse,HttpResponseNotFound
 import os
 def index(request):
+            
     
+    return render(request,"index.html")
+
+def convert(request):
     if request.method=='POST':
         """file2=request.FILES['document']
         
@@ -62,10 +66,7 @@ def index(request):
             # file=b(file2)
             print(file)                    
             return render(request,"download.html")
-    return render(request,"index.html")
-
-
-
+    return render(request,"convert.html")
 def waprfile(request):
     
 
