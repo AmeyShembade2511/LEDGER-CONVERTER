@@ -1,101 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
-:root{
-    --bgcol :#161b22;
-    --btncol : #0d6efd;
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+:root {
+  --bgcol: #010409;
+  --btncol: #0d6efd;
 }
-body{
-    margin: 0px;
-    padding: 0px;
-    background-color:var(--bgcol);
-    font-family: 'Kanit', sans-serif;
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bgcol);
+  font-family: "Kanit", sans-serif;
 }
 
-.File{
-    text-align: center;
-    background-color: var(--bgcol);
-    padding: 30px 50px;
+.File {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0,0.5);
+  height: 80vh;
+  width: 100%;
 }
-.File h1{
-    font-size: 5rem;
-    background: -webkit-linear-gradient(180deg, #EAEC96 , #FA0559 );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding: 30px 10px;
-}
-input[type='file']{
-    padding: 50px 10px;
-    margin-left: 120px;
-}
-.head{
-    padding: 30px;
-}
-input::-webkit-file-upload-button{
-    color: white;
-    background-color: var(--btncol);
-    border-radius: 7px;
-    border-color: var(--btncol);
-    padding: 0.2em 1.8em 0.2em 1.8em;
-    font-size:40px;
-    
-}
-.bttn{
-    padding: 30px;
-}
-.bttn button{
-    margin: 0px 20px;
-}
-.input{
-    color: blue;
-}
-#footer{
-    text-align: center;
-    padding: 7% 15% ;
-}
-.lin{
-    position: relative;
-    height: 300px;
+.File img{
+    position: absolute;
+    top: 0;
+    left:0;
+    height:80vh;
     width: 100%;
-    font-size: 5rem;
-    background: -webkit-linear-gradient(180deg, #EAEC96 , #FA0559 );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    padding-top: 80px;
-    /* padding-left: 400px;
-    padding-right: 400px; */
-    padding-bottom: 80px;
-}
-/* .lin h1,
-.lin h3{
-    position: absolute;
-    top: 0;
-    text-align: center;
-    z-index: 1;
-}
-.lin img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100vw;
     z-index: -1;
-} */
-footer p{
-    color: black;
-    font-size: large;
 }
-.icon-1{
-    padding-left: 4%;
-    padding-bottom: 5%;
-    padding-right: 4%;
-    color: hsl(0, 100%, 50%);
-    transition: all 0.2s;
+.File h1 {
+  color: #0d6efd;
+  font-size: 60px;
 }
-.icon-1:hover{
-    padding-left: 4%;
-    padding-bottom: 5%;
-    padding-right: 4%;
-    color: hsl(0, 100%, 30%);
+
+input[type="file"] {
+  padding: 50px 10px;
+  margin-left: 10vw;
+}
+.head {
+  padding: 30px;
+}
+input::-webkit-file-upload-button {
+  color: white;
+  background-color: var(--btncol);
+  border-radius: 7px;
+  border-color: var(--btncol);
+  padding: 0.2em 1.8em 0.2em 1.8em;
+  font-size: 40px;
+}
+.bttn {
+  padding: 30px;
+}
+.bttn button {
+  margin: 0px 20px;
+}
+.input {
+  color: blue;
+}
+#footer {
+  text-align: center;
+  padding: 7% 15%;
+}
+.lin {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  font-size: 5rem;
+  background: -webkit-linear-gradient(180deg, #eaec96, #fa0559);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+footer p {
+  color: goldenrod;
+  font-size: large;
+}
+.icon-1 {
+  padding-left: 4%;
+  padding-bottom: 5%;
+  padding-right: 4%;
+  color: hsl(0, 100%, 50%);
+  transition: all 0.2s;
+}
+.icon-1:hover {
+  padding-left: 4%;
+  padding-bottom: 5%;
+  padding-right: 4%;
+  color: hsl(0, 100%, 30%);
 }
