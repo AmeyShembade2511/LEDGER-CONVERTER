@@ -10,7 +10,43 @@
     background-color: var(--bgcol);
     font-family: "Kanit", sans-serif;
   }
+  /* Header */
+  .title{
+    color: blue;
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
   /* Main */
+  .btn{
+    width: fit-content;
+    height: fit-content;
+    background-color: red;
+    color: yellow;
+    transition: all 0.2s;
+  }
+  main{
+    position: relative;
+    height: 80vh;
+  }
+  main img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+  }
+  .btn:hover{
+    color: red;
+    background-color: yellow;
+  }
+  .center{
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    align-items: center;
+  }
   /* Footer section */
 #footer {
   text-align: center;
