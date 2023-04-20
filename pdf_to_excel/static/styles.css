@@ -1,13 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
 :root {
-  --bgcol: #010409;
+  --bgcol: #18191b;
   --btncol: #0d6efd;
 }
 body {
   margin: 0px;
   padding: 0px;
   background-color: var(--bgcol);
-  font-family: "Kanit", sans-serif;
+  font-family: 'Roboto Serif', serif;
 }
 
 .File {
@@ -32,8 +32,9 @@ body {
 }
 
 input[type="file"] {
-  padding: 50px 10px;
+  /* padding: 50px 10px; */
   margin-left: 10vw;
+  width: fit-content;
 }
 .head {
   padding: 30px;

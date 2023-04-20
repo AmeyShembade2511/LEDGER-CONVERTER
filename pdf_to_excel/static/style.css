@@ -1,25 +1,59 @@
-#footer{
-    
-    text-align: center;
-    padding: 7% 15% ;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
+:root {
+  --bgcol: #18191b;
+  --btncol: #0d6efd;
 }
-h1{
-    padding-bottom: 40px;
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bgcol) !important;
+  font-family: 'Roboto Serif', serif;
 }
-.ea{
-    padding-bottom: 40px;
+
+.head {
+  padding: 30px;
 }
-.lin{
-    background-color: gray;
-    color: white;
-    text-align: center;
-    padding-top: 80px;
-    padding-left: 400px;
-    padding-right: 400px;
-    padding-bottom: 80px;
+
+.ea h1{
+    color:goldenrod;
 }
-.icon-1{
-    padding-left: 4%;
-    padding-bottom: 5%;
-    padding-right: 4%;
+button{
+    margin: 2rem 0;
+    font-size: 10rem;
+    width: 16rem;
+    height: 8rem;
+}
+#footer {
+  text-align: center;
+  padding: 7% 15%;
+}
+.lin {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  font-size: 5rem;
+  background: -webkit-linear-gradient(180deg, #eaec96, #fa0559);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+footer p {
+  color: goldenrod;
+  font-size: large;
+}
+.icon-1 {
+  padding-left: 4%;
+  padding-bottom: 5%;
+  padding-right: 4%;
+  color: hsl(0, 100%, 50%);
+  transition: all 0.2s;
+}
+.icon-1:hover {
+  padding-left: 4%;
+  padding-bottom: 5%;
+  padding-right: 4%;
+  color: hsl(0, 100%, 30%);
 }
