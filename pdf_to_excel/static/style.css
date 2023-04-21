@@ -16,12 +16,7 @@ body {
 
 .ea h1{
     color:goldenrod;
-}
-button{
-    margin: 2rem 0;
-    font-size: 10rem;
-    width: 16rem;
-    height: 8rem;
+    margin-bottom: 2rem;
 }
 #footer {
   text-align: center;

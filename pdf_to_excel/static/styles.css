@@ -33,7 +33,7 @@ body {
 
 input[type="file"] {
   /* padding: 50px 10px; */
-  margin-left: 10vw;
+  margin:0px 0px 30px 120px;
   width: fit-content;
 }
 .head {
@@ -48,11 +48,14 @@ input::-webkit-file-upload-button {
   font-size: 40px;
 }
 .bttn {
-  padding: 30px;
+  display: flex;
+  gap:30px;
+  align-items: center;
+  justify-content: center;
 }
-.bttn button {
+/* .bttn button {
   margin: 0px 20px;
-}
+} */
 .input {
   color: blue;
 }
